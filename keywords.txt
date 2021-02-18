@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRobot_TCS3430	KEYWORD1
+
+#######################################
+# Methods and Functions  (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+setWaitTimer	KEYWORD2
+setWaitLong	KEYWORD2
+setIntegrationTime	KEYWORD2
+setWaitTime	KEYWORD2
+setALSGain	KEYWORD2
+setInterruptPersistence	KEYWORD2
+getDeviceStatus	KEYWORD2
+getZData	KEYWORD2
+getYData	KEYWORD2
+getIR1Data	KEYWORD2
+getXData	KEYWORD2
+getIR2Data	KEYWORD2
+setHighGAIN	KEYWORD2
+setIntReadClear	KEYWORD2
+setSleepAfterInterrupt	KEYWORD2
+setAutoZeroMode	KEYWORD2
+setAutoZeroNTHIteration	KEYWORD2
+setALSSaturationInterrupt	KEYWORD2
+setALSInterrupt	KEYWORD2
+setCH0IntThreshold	KEYWORD2
+
+#######################################
+# Constants   (LITERAL1)
+#######################################
