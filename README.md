@@ -6,7 +6,7 @@ The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tr
 
 ![](./resources/images/SEN0403.png)
 
-## Mall Link (https://www.dfrobot.com/product-2257.html)
+## Product Link (https://www.dfrobot.com/product-2257.html)
     SKU:SEN0403
 
 ## Table of Contents
