@@ -9,6 +9,8 @@
   # @get from https://www.dfrobot.com
   # @url https://github.com/DFRobot/DFRobot_TCS3430
 """
+import sys
+sys.path.append('../')
 from DFRobot_TCS3430 import DFRobot_TCS3430
 import time
 import RPi.GPIO as GPIO

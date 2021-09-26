@@ -1,36 +1,37 @@
 # DFRobot_TCS3430
+- [English Version](./README.md)
 
-- [中文版](./README_CN.md)
-The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperature, all of which are used to support various potential applications.
+TCS3430具有先进的数字环境光感测（ALS）和CIE 1931三刺激色彩感测（XYZ），CIE1931 XYZ三刺激模型是根据人眼中三种视锥细胞设立的XYZ标准，CIE1931 XYZ色彩空间包含普通视力的人可以看到的所有色彩感觉。TCS3430的光谱响应几乎和人眼一致，可以实现高精度的照度和色温测量，因此可以实现所测即所见。
 
 ![](../../resources/images/SEN0403.png)
 
-## Mall Link (https://www.dfrobot.com/product-2257.html)
+
+## 产品链接 (https://www.dfrobot.com.cn/goods-3083.html)
+
     SKU:SEN0403
 
-## Table of Contents
+## 目录
 
-* [Summary](#summary)
-* [Installation](#installation)
-* [Methods](#methods)
-* [Compatibility](#compatibility)
-* [History](#history)
-* [Credits](#credits)
+* [概述](#概述)
+* [库安装](#库安装)
+* [方法](#方法)
+* [兼容性](#兼容性y)
+* [历史](#历史)
+* [创作者](#创作者)
 
-## Summary
-Detection of XYZ tristimulus and infrared data
+## 概述
 
-## Installation
+XYZ三刺激和红外数据的检测
 
-To use this library, first download the library to Raspberry Pi, then open the routines folder. To execute one routine, demox.py, type python demox.py on the command line. To execute the get_xyz_ir_data.py routine, for example, you need to type:
+## 库安装
 
+要使用这个库，首先将库下载到Raspberry Pi，然后打开例程文件夹。要执行一个例程demox.py，请在命令行中输入python demox.py。例如，要执行get_xyz_ir_data.py例程，你需要输入:
 ```
 python get_xyz_ir_data.py
 ```
+## 方法
 
-## Methods
-
-```python
+```Python
   ''' 
     @brief  Set temperature and humidity
     @return  equipment condition, True succeed, False failed 
@@ -156,20 +157,19 @@ python get_xyz_ir_data.py
     @brief  Get the status of the device
   '''
   get_device_status(self)
-
 ```
 
-## Compatibility
+## 兼容性
 
 * RaspberryPi Version
 
 | Board        | Work Well | Work Wrong | Untested | Remarks |
 | ------------ | :-------: | :--------: | :------: | ------- |
 | RaspberryPi2 |           |            |    √     |         |
-| RaspberryPi3 |           |            |    √     |         |
-| RaspberryPi4 |     √     |            |          |         |
+| RaspberryPi3 |     √     |            |          |         |
+| RaspberryPi4 |           |            |    √     |         |
 
-* Python Version
+* Python 版本
 
 | Python  | Work Well | Work Wrong | Untested | Remarks |
 | ------- | :-------: | :--------: | :------: | ------- |
@@ -177,12 +177,13 @@ python get_xyz_ir_data.py
 | Python3 |     √     |            |          |         |
 
 
-## History
+## 历史
 
-- data 2021-01-28
-- version V1.0
+- 日期 2021-9-26
+- 版本 V1.0.0
 
 
-## Credits
+## 创作者
 
-Written by [yangfeng]<feng.yang@dfrobot.com>,2021,(Welcome to our [website](https://www.dfrobot.com/))
+Written by yangfeng(feng.yang@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))
+

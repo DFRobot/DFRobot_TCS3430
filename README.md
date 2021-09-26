@@ -1,8 +1,11 @@
 # DFRobot_TCS3430
 
+- [中文版](./README_CN.md)
 The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperature, all of which are used to support various potential applications.
 
-## Mall Link（https://www.dfrobot.com/）
+![](./resources/images/SEN0403.png)
+
+## Mall Link (https://www.dfrobot.com/product-2257.html)
     PRODUCT ID:SEN0403
 
 ## Table of Contents
@@ -13,8 +16,6 @@ The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tr
 * [Compatibility](#compatibility)
 * [History](#history)
 * [Credits](#credits)
-<snippet>
-<content>
 
 ## Summary
 Detection of XYZ tristimulus and infrared data

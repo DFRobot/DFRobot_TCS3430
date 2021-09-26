@@ -275,7 +275,7 @@ class DFRobot_TCS3430:
     @param  mode  True enable  False disenable
   '''
   def set_als_interrupt(self,mode=True):
-    self.set_int_read_clear(True);
+    self.set_int_read_clear(True)
     if(mode==True):
       self.__i2cbus.write_byte_data(self.__i2c_addr,self.TCS3430_REG_INTENAB_ADDR, self.__i2cbus.read_byte_data(self.__i2c_addr,self.TCS3430_REG_INTENAB_ADDR)|self.ENABLEREG_ALS_INT_EN)
     if(mode==False):
@@ -286,7 +286,7 @@ class DFRobot_TCS3430:
     @param  mode  True enable  False disenable
   '''
   def set_als_saturation_interrupt(self,mode=True):
-    self.set_int_read_clear(True);
+    self.set_int_read_clear(True)
     if(mode==True):
       self.__i2cbus.write_byte_data(self.__i2c_addr,self.TCS3430_REG_INTENAB_ADDR, self.__i2cbus.read_byte_data(self.__i2c_addr,self.TCS3430_REG_INTENAB_ADDR)|self.ALS_SATURATION_INTERRUPT_EN)
     if(mode==False):
