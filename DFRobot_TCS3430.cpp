@@ -87,7 +87,7 @@ void DFRobot_TCS3430:: disableALSADC()
 
 void DFRobot_TCS3430:: setWaitTimer(bool mode)
 {
-  if(mode = true){
+  if(mode){
     _enableReg.wen = 1;
     write(eRegENABLEAddr,*((uint8_t*)(&_enableReg)));
   }
