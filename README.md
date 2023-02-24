@@ -2,7 +2,7 @@
 
 - [中文版](./README_CN.md)
 
-The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperature, all of which are used to support various potential applications.
+The device featrues advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperatrue, all of which are used to support various potential applications.
 
 ![](./resources/images/SEN0403.png)
 
@@ -28,21 +28,21 @@ To use this library, download the library file first, paste it into the \Arduino
 ## Methods
 
 ```C++
-  /**
+ /**
    * @brief  Initialization function
-   * @return return true succeed ;return false failed.
+   * @return Whether the device is on or not. return true succeed ;return false failed.
    */
   bool begin();
 
   /**
-   * @brief  enable wait timer 
-   * @param  mode  ture : enable ; false : disenable
+   * @brief  Config the wait timer 
+   * @param  mode  true : enable ; false : disenable
    */
   void setWaitTimer(bool mode = true);
 
   /**
-   * @brief  Set the wait long time
-   * @param  mode  ture : enable ; false : disenable
+   * @brief  Set the function of wait long time
+   * @param  mode  true : enable ; false : disenable
    */
   void setWaitLong(bool mode = true);
 
@@ -53,8 +53,8 @@ To use this library, download the library file first, paste it into the \Arduino
   void setIntegrationTime(uint8_t aTime);
 
   /**
-   * @brief  enable wait timer 
-   * @param  wTime  wait time   * @param  wTime  wait time
+   * @brief  set wait time 
+   * @param  wTime  wait time 
    */
   void setWaitTime(uint8_t wTime);
 
@@ -107,19 +107,19 @@ To use this library, download the library file first, paste it into the \Arduino
   uint16_t getIR2Data();
   /**
    * @brief  Set the ALS High gain 
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setHighGAIN(bool mode);
 
   /**
    * @brief  If this bit is set, all flag bits in the STATUS register will be reset whenever the STATUS register is read over I2C.
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setIntReadClear(bool mode = true);
 
   /**
-   * @brief  Turn on sleep after interruption
-   * @param  mode  ture : enable ; false : disenable
+   * @brief  Config the function of 'sleep after interruption'
+   * @param  mode  true : enable ; false : disenable
    */
   void setSleepAfterInterrupt(bool mode = true);
 
@@ -139,14 +139,14 @@ To use this library, download the library file first, paste it into the \Arduino
   void setAutoZeroNTHIteration(uint8_t value);
 
   /**
-   * @brief  enable ALS saturation interrupt
-   * @param  mode  ture : enable ; false : disenable
+   * @brief  Config the ALS saturation interruption
+   * @param  mode  true : enable ; false : disenable
    */
   void setALSSaturationInterrupt(bool mode = true);
 
   /**
-   * @brief  enable ALS interription
-   * @param  mode  ture : enable ; false : disenable
+   * @brief  Config the ALS interruption
+   * @param  mode  true : enable ; false : disenable
    */
   void setALSInterrupt(bool mode = true);
 
@@ -175,7 +175,7 @@ Arduino MEGA2560 | √ | | |
 
 ## History
 
-- data 2021-01-28
+- data 2023-02-24
 - version V1.0
 
 

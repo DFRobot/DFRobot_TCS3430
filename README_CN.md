@@ -29,153 +29,134 @@ X/Y/Z刺激光和红外数据的检测
 ## 方法
 
 ```C++
-  /**
-   *  @brief 液晶屏以及主控IIC的初始化
-   */ 
-  void init();
+ /**
+   * @brief  Initialization function
+   * @return Whether the device is on or not. return true succeed ;return false failed.
+   */
+  bool begin();
 
   /**
-   *  @brief 清除显示并将光标回到初始位置（0位置）
+   * @brief  Config the wait timer 
+   * @param  mode  true : enable ; false : disenable
    */
-  void clear();
+  void setWaitTimer(bool mode = true);
 
   /**
-   *  @brief 将光标回到初始位置（0,0）
+   * @brief  Set the function of wait long time
+   * @param  mode  true : enable ; false : disenable
    */
-  void home();
-
-    /**
-     *  @brief Turn off the display
-     */
-  void noDisplay();
+  void setWaitLong(bool mode = true);
 
   /**
-   *  @brief Turn on the display
+   * @brief  Set the internal integration time of the  four-channel ADCs
+   * @param  aTIme  integration time
    */
-  void display();
+  void setIntegrationTime(uint8_t aTime);
 
   /**
-   *  @brief Turn  off the blinking showCursor
+   * @brief  set wait time 
+   * @param  wTime  wait time 
    */
-  void stopBlink();
+  void setWaitTime(uint8_t wTime);
 
   /**
-   *  @brief Turn on  the blinking showCursor
+   * @brief  Set the ALS gain 
+   * @param  aGain  the value of gain
    */
-  void blink();
+  void setALSGain(uint8_t aGain);
 
   /**
-   *  @brief Turn off the underline showCursor 
+   * @brief  Set ALS interrupt Persistence
+   * @param  apers :ALS Interrupt Persistence
    */
-  void noCursor();
+  void setInterruptPersistence(uint8_t apers);
 
   /**
-   *  @brief Turn on the underline showCursor 
+   * @brief  get device status
+   * @return  status
    */
-  void cursor();
-
-  /**
-   *  @brief 向左滚动显示
-   */
-  void scrollDisplayLeft();
-
-  /**
-   *  @brief 向右滚动显示
-   */
-  void scrollDisplayRight();
- 
-  /**
-   *  @brief This is for text that flows Left to Right
-   */
-  void leftToRight();
- 
-  /**
-   *  @brief This is for text that flows Right to Left
-   */
-  void rightToLeft();
-
-  /**
-   *  @brief This will 'left justify' text from the showCursor
-   */
-  void noAutoscroll();
- 
-  /**
-   *  @brief This will 'right justify' text from the showCursor
-   */
-  void autoscroll();
-   
-  /**
-   *  @brief Allows us to fill the first 8 CGRAM locations with custom characters
-   *  @param location 代替字符 范围（0-7）
-   *  @param charmap  字符数组 大小8个字节
-   */
-  void customSymbol(uint8_t location, uint8_t charmap[]);
-
-  /**
-   *  @brief 设置光标位置
-   *  @param col 列数 可选范围 0-15
-   *  @param row 行数 可选范围 0-1，0代表了第一行，1代表了第二行
-   */
-  void setCursor(uint8_t col, uint8_t row);
+  uint8_t getDeviceStatus();
   
   /**
-   *  @brief 设置RGB
-   *  @param r  red   范围(0-255)
-   *  @param g  green 范围(0-255)
-   *  @param b  blue  范围(0-255)
+   * @brief  get channel 0 value
+   * @return  the z data
    */
-  void setRGB(uint8_t r, uint8_t g, uint8_t b);
+  uint16_t getZData();
 
   /**
-   *  @brief 设置背光PWM输出
-   *  @param color  背光颜色  参数选择：REG_RED\REG_GREEN\REG_BLUE
-   *  @param pwm  颜色强度值   范围(0-255)
+   * @brief  get channel 1 value
+   * @return  the y data
    */
-  void setPWM(uint8_t color, uint8_t pwm);
+  uint16_t getYData();
 
   /**
-   *  @brief 背光颜色
-   *  @param color  背光颜色  参数选择： WHITE\RED\GREEN\BLUE
+   * @brief  get channel 2 value
+   * @return  the IR1 data 
    */
-  void setColor(uint8_t color);
+  uint16_t getIR1Data();
+  
+  /**
+   * @brief  get channel 3 value
+   * @return  the x data
+   */
+  uint16_t getXData();
+  
+  /**
+   * @brief  get channel 3 value
+   * @return  the IR2 data
+   */
+  uint16_t getIR2Data();
+  /**
+   * @brief  Set the ALS High gain 
+   * @param  mode  true : enable ; false : disenable
+   */
+  void setHighGAIN(bool mode);
 
   /**
-   *  @brief 关闭背光
+   * @brief  If this bit is set, all flag bits in the STATUS register will be reset whenever the STATUS register is read over I2C.
+   * @param  mode  true : enable ; false : disenable
    */
-  void closeBacklight();
+  void setIntReadClear(bool mode = true);
 
   /**
-   *  @brief 设置背光为白色
+   * @brief  Config the function of 'sleep after interruption'
+   * @param  mode  true : enable ; false : disenable
    */
-  void setColorWhite();
+  void setSleepAfterInterrupt(bool mode = true);
 
   /**
-   *  @brief blink the LED backlight
+   * @brief  set az mode
+   * @param  mode  :0,Always start at zero when searching the best offset value
+                   :1,Always start at the previous (offset_c) with the auto-zero mechanism
    */
-  void blinkLED(void);
+  void setAutoZeroMode(uint8_t mode);
+  
+  /**
+   * @brief  set az nth iteration type(Run autozero automatically every nth ALS iteration)
+   * @param  value :0,never
+                   :7,only at first ALS cycle
+                   :n, every nth time
+   */
+  void setAutoZeroNTHIteration(uint8_t value);
 
   /**
-   *  @brief 不闪烁背光
+   * @brief  Config the ALS saturation interruption
+   * @param  mode  true : enable ; false : disenable
    */
-  void noBlinkLED(void);
+  void setALSSaturationInterrupt(bool mode = true);
 
   /**
-   *  @brief write character
-   *  @param data 写入的数据
+   * @brief  Config the ALS interruption
+   * @param  mode  true : enable ; false : disenable
    */
-  virtual size_t write(uint8_t data);
+  void setALSInterrupt(bool mode = true);
 
   /**
-   *  @brief send command
-   *  @param data 发送的命令
+   * @brief  Set the channel 0 interrupt threshold
+   * @param  thresholdL :the low 16 bit values
+   * @param  thresholdH :the high 16 bit values
    */
-  void command(uint8_t data);
-
-  /**
-   *  @brief 设置背光
-   *  @param mode  true代表开启背光并设置为白色，false代表关闭背光
-   */
-  void setBacklight(bool mode);
+  void setCH0IntThreshold(uint16_t thresholdL,uint16_t thresholdH);
 ```
 
 ## 兼容性
@@ -192,7 +173,7 @@ X/Y/Z刺激光和红外数据的检测
 
 ## 历史
 
-- 日期 2021-9-26
+- 日期 2023-2-24
 - 版本 V1.0.0
 
 

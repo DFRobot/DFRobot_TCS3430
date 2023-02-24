@@ -33,7 +33,7 @@ python get_xyz_ir_data.py
 
 ```Python
   ''' 
-    @brief  Set temperature and humidity
+    @brief  Set temperatrue and humidity
     @return  equipment condition, True succeed, False failed 
   '''
   begin(self)

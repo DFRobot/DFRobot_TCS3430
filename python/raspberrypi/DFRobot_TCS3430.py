@@ -1,5 +1,5 @@
 """ file DFRobot_TCS3430.py
-  # DFRobot_TCS3430 Class infrastructure, implementation of underlying methods
+  # DFRobot_TCS3430 Class infrastructrue, implementation of underlying methods
   @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
   @licence     The MIT License (MIT)
   @author      [yangfeng]<feng.yang@dfrobot.com> 

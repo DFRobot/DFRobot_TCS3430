@@ -1,6 +1,6 @@
 /*!
  * @file DFRobot_TCS3430.h
- * @brief Define the infrastructure for the DFRobot_TCS3430 class
+ * @brief Define the infrastructrue for the DFRobot_TCS3430 class
  * @n This is a DFRobot_TCS3430 sensor that supports IIC communication. The IIC address cannot be changed, default to 0x39. The functions are as follows:
  * @n Function Detection of XYZ tristimulus and infrared data
  * @copyright Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
@@ -36,7 +36,7 @@ typedef struct {
   uint8_t   aen: 1; /* ALS Enable. This bit actives the ALS function.
                       Set aen=1 and pon=1 in the same command to ensure autozero function is run prior to the first measurement.*/
   uint8_t   reservedBit2: 1; /* Reserved. */
-  uint8_t   wen: 1; /* Wait Enable. This bit activates the wait feature. 
+  uint8_t   wen: 1; /* Wait Enable. This bit activates the wait featrue. 
                        Writing a 1 activates the wait timer.
                        Writing a 0 disables the wait timer. */
   uint8_t   reservedBit4_7: 4; /* Reserved. */
@@ -341,13 +341,13 @@ public:
 
   /**
    * @brief  Config the wait timer 
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setWaitTimer(bool mode = true);
 
   /**
    * @brief  Set the function of wait long time
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setWaitLong(bool mode = true);
 
@@ -412,19 +412,19 @@ public:
   uint16_t getIR2Data();
   /**
    * @brief  Set the ALS High gain 
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setHighGAIN(bool mode);
 
   /**
    * @brief  If this bit is set, all flag bits in the STATUS register will be reset whenever the STATUS register is read over I2C.
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setIntReadClear(bool mode = true);
 
   /**
    * @brief  Config the function of 'sleep after interruption'
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setSleepAfterInterrupt(bool mode = true);
 
@@ -445,13 +445,13 @@ public:
 
   /**
    * @brief  Config the ALS saturation interruption
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setALSSaturationInterrupt(bool mode = true);
 
   /**
    * @brief  Config the ALS interruption
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setALSInterrupt(bool mode = true);
 
@@ -466,7 +466,7 @@ private:
 
   /**
    * @brief  Access to IR channel; allows mapping of IR channel on channel 3.
-   * @param  mode  ture : enable ; false : disenable
+   * @param  mode  true : enable ; false : disenable
    */
   void setIR2Channel(bool mode = true);
   

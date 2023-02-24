@@ -2,7 +2,7 @@
 
 - [中文版](./README_CN.md)
 
-The device features advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperature, all of which are used to support various potential applications.
+The device featrues advanced digital Ambient Light Sensing (ALS) and CIE 1931 Tristimulus Color Sensing (XYZ). Each of the channels has a filter to control its optical response, which allows the device to accurately measure ambient light and sense color. These measurements are used to calculate chromaticity, illuminance and color temperatrue, all of which are used to support various potential applications.
 
 ![](../../resources/images/SEN0403.png)
 
@@ -33,7 +33,7 @@ python get_xyz_ir_data.py
 
 ```python
   ''' 
-    @brief  Set temperature and humidity
+    @brief  Set temperatrue and humidity
     @return  equipment condition, True succeed, False failed 
   '''
   begin(self)
